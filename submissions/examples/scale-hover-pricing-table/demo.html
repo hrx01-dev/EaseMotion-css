@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scale-hover glassmorphism pricing table with responsive CSS motion.">
+  <title>Scale Hover Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">EaseMotion / Interaction Study</p>
+        <h1>Plans designed to stand out.</h1>
+        <p class="lead">Compare every option at a glance, then use the gentle scale interaction to bring one choice forward without rearranging the layout.</p>
+      </div>
+      <aside class="hero__meta" aria-label="Interaction details">
+        <span>TRANSFORM</span>
+        <strong>SCALE 1.05×</strong>
+        <small>Hover or focus a card</small>
+      </aside>
+    </header>
+
+    <section class="steps" aria-label="Interaction sequence">
+      <div><b>01</b><strong>Compare</strong><span>All plans stay visible.</span></div>
+      <i aria-hidden="true"></i>
+      <div><b>02</b><strong>Focus</strong><span>One plan gains emphasis.</span></div>
+      <i aria-hidden="true"></i>
+      <div><b>03</b><strong>Lift</strong><span>Depth comes from scale.</span></div>
+    </section>
+
+    <section class="plans" aria-label="Pricing plans">
+      <article class="plan" id="starter">
+        <div class="plan__top"><span class="number">01</span><div><h2>Starter</h2><p>For focused personal work</p></div></div>
+        <div class="price"><strong>$9</strong><span>/ month</span></div>
+        <p class="description">A compact toolkit for turning small ideas into polished projects without unnecessary complexity.</p>
+        <div class="divider"></div>
+        <h3>Included</h3>
+        <ul><li>3 active projects</li><li>5 GB storage</li><li>Basic analytics</li><li>Community support</li></ul>
+        <a href="#starter-action">Choose Starter <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="plan plan--featured" id="pro">
+        <span class="badge">Most popular</span>
+        <div class="plan__top"><span class="number">02</span><div><h2>Pro</h2><p>For collaborative teams</p></div></div>
+        <div class="price"><strong>$24</strong><span>/ month</span></div>
+        <p class="description">A flexible workspace for teams that iterate quickly and need room to collaborate.</p>
+        <div class="divider"></div>
+        <h3>Included</h3>
+        <ul><li>Unlimited projects</li><li>100 GB storage</li><li>Advanced analytics</li><li>Priority support</li></ul>
+        <a href="#pro-action">Choose Pro <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="plan" id="scale">
+        <div class="plan__top"><span class="number">03</span><div><h2>Scale</h2><p>For production workloads</p></div></div>
+        <div class="price"><strong>$59</strong><span>/ month</span></div>
+        <p class="description">More capacity and control for organizations moving from a small workflow to production.</p>
+        <div class="divider"></div>
+        <h3>Included</h3>
+        <ul><li>Unlimited everything</li><li>500 GB storage</li><li>Team permissions</li><li>Dedicated support</li></ul>
+        <a href="#scale-action">Choose Scale <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <section class="details" aria-label="Interaction notes">
+      <article><span>01</span><h2>Stable grid</h2><p>The cards keep their document dimensions while the active surface scales above its neighbors.</p></article>
+      <article><span>02</span><h2>Visible focus</h2><p>Pointer and keyboard interaction use the same emphasis so the motion never depends on a mouse.</p></article>
+      <article><span>03</span><h2>Responsive scale</h2><p>The scale amount becomes more restrained at narrow widths to preserve comfortable comparison.</p></article>
+      <article><span>04</span><h2>Reduced motion</h2><p>Operating-system motion preferences disable the transform while keeping the content intact.</p></article>
+    </section>
+
+    <footer><span>PURE CSS</span><span>GLASSMORPHISM</span><span>NO JAVASCRIPT</span><span>ACCESSIBLE FOCUS</span></footer>
+  </main>
+</body>
+</html>
