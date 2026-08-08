@@ -11,40 +11,98 @@
   <main class="hero-shell">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__noise" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
       <div class="hero__waves" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--three" aria-hidden="true"></div>
 
-      <nav class="hero__nav" aria-label="Primary">
-        <a class="brand" href="#top" aria-label="EaseMotion home"><span class="brand__mark">E</span> EaseMotion</a>
+      <nav class="hero__nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="EaseMotion home">
+          <span class="brand__mark" aria-hidden="true">E</span>
+          <span>EaseMotion</span>
+        </a>
         <div class="nav__links">
           <a href="#features">Features</a>
+          <a href="#process">Process</a>
           <a href="#details">Details</a>
         </div>
       </nav>
 
       <div class="hero__content" id="top">
-        <p class="hero__eyebrow"><span class="status-dot"></span> CSS Motion System · 01</p>
-        <h1 id="hero-title">Build boldly.<br><span>Move naturally.</span></h1>
-        <p class="hero__copy">A glassmorphism hero where concentric waves create a calm sense of depth. The entire motion field is generated with CSS—no JavaScript, canvas, or external dependencies.</p>
+        <p class="hero__eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          CSS Motion System · Ripple / 01
+        </p>
+        <h1 id="hero-title">
+          Build boldly.
+          <span>Move naturally.</span>
+        </h1>
+        <p class="hero__copy">
+          A glassmorphism hero where concentric waves create a calm sense of depth.
+          The complete motion field is generated with CSS—no JavaScript, canvas,
+          libraries, or external assets are required.
+        </p>
         <div class="hero__actions">
-          <a class="button button--primary" href="#features">Explore the motion <span aria-hidden="true">↗</span></a>
-          <a class="button button--ghost" href="#details">Read the details</a>
+          <a class="button button--primary" href="#features">
+            Explore the motion
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button--ghost" href="#details">
+            Read the details
+          </a>
         </div>
       </div>
 
       <aside class="hero__panel" id="features" aria-label="Component highlights">
-        <div><strong>01</strong><span>Pure CSS</span><small>Zero dependencies</small></div>
-        <div><strong>02</strong><span>Responsive</span><small>Fluid at every size</small></div>
-        <div><strong>03</strong><span>Accessible</span><small>Reduced-motion ready</small></div>
+        <div class="hero__panel-item">
+          <strong>01</strong>
+          <span>Pure CSS</span>
+          <small>Zero dependencies</small>
+        </div>
+        <div class="hero__panel-item">
+          <strong>02</strong>
+          <span>Responsive</span>
+          <small>Fluid at every size</small>
+        </div>
+        <div class="hero__panel-item">
+          <strong>03</strong>
+          <span>Accessible</span>
+          <small>Reduced-motion ready</small>
+        </div>
       </aside>
 
+      <section class="hero__process" id="process" aria-label="Motion sequence">
+        <p class="process__label">Motion sequence</p>
+        <div class="process__steps">
+          <div class="process__step">
+            <span>01</span>
+            <p>Origin</p>
+          </div>
+          <div class="process__line" aria-hidden="true"></div>
+          <div class="process__step">
+            <span>02</span>
+            <p>Expansion</p>
+          </div>
+          <div class="process__line" aria-hidden="true"></div>
+          <div class="process__step">
+            <span>03</span>
+            <p>Fade</p>
+          </div>
+        </div>
+      </section>
+
       <div class="hero__footer" id="details">
-        <span>RIPPLE / 5 LAYERS</span>
+        <span>RIPPLE / 6 LAYERS</span>
         <span>DESIGNED FOR PRODUCT HEROES</span>
-        <span>CSS · HTML</span>
+        <span>HTML · CSS · 0 JS</span>
       </div>
     </section>
   </main>
