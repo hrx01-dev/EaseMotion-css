@@ -3,27 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A pure CSS ripple-wave hero section for glassmorphism interfaces.">
-  <title>Ripple-Wave Hero</title>
+  <meta name="description" content="A polished pure-CSS ripple-wave hero for modern technology products.">
+  <title>Ripple-Wave Hero — EaseMotion</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="hero-shell">
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__noise" aria-hidden="true"></div>
       <div class="hero__waves" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
-      <div class="hero__content">
-        <p class="hero__eyebrow">EaseMotion CSS · Motion Showcase</p>
+      <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+
+      <nav class="hero__nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="EaseMotion home"><span class="brand__mark">E</span> EaseMotion</a>
+        <div class="nav__links">
+          <a href="#features">Features</a>
+          <a href="#details">Details</a>
+        </div>
+      </nav>
+
+      <div class="hero__content" id="top">
+        <p class="hero__eyebrow"><span class="status-dot"></span> CSS Motion System · 01</p>
         <h1 id="hero-title">Build boldly.<br><span>Move naturally.</span></h1>
-        <p class="hero__copy">A glassmorphism hero with a calm ripple field that gives technology products a living, responsive first impression.</p>
+        <p class="hero__copy">A glassmorphism hero where concentric waves create a calm sense of depth. The entire motion field is generated with CSS—no JavaScript, canvas, or external dependencies.</p>
         <div class="hero__actions">
-          <a class="hero__button hero__button--primary" href="#explore">Explore the motion</a>
-          <a class="hero__button hero__button--ghost" href="#details">View details</a>
+          <a class="button button--primary" href="#features">Explore the motion <span aria-hidden="true">↗</span></a>
+          <a class="button button--ghost" href="#details">Read the details</a>
         </div>
       </div>
-      <div class="hero__meta" id="details">
-        <span>Pure CSS</span><span>Responsive</span><span>Reduced motion ready</span>
+
+      <aside class="hero__panel" id="features" aria-label="Component highlights">
+        <div><strong>01</strong><span>Pure CSS</span><small>Zero dependencies</small></div>
+        <div><strong>02</strong><span>Responsive</span><small>Fluid at every size</small></div>
+        <div><strong>03</strong><span>Accessible</span><small>Reduced-motion ready</small></div>
+      </aside>
+
+      <div class="hero__footer" id="details">
+        <span>RIPPLE / 5 LAYERS</span>
+        <span>DESIGNED FOR PRODUCT HEROES</span>
+        <span>CSS · HTML</span>
       </div>
     </section>
   </main>
