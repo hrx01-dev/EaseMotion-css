@@ -3,10 +3,15 @@
   --text: #f5f5f5;
   --muted: #a3a3a3;
   --line: #777;
+  --focus: #ffffff;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
 }
 
 body {
@@ -21,10 +26,12 @@ body {
 
 .page {
   width: min(1000px, calc(100% - 32px));
+  padding: 48px 0;
   text-align: center;
 }
 
 .eyebrow {
+  margin: 0;
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 800;
@@ -40,7 +47,12 @@ body {
   color: transparent;
   -webkit-text-stroke: 1px var(--line);
   text-shadow: 0 0 0 transparent;
-  transition: color 500ms ease, -webkit-text-stroke-color 500ms ease, text-shadow 500ms ease;
+  text-wrap: balance;
+  transition:
+    color 500ms ease,
+    -webkit-text-stroke-color 500ms ease,
+    text-shadow 500ms ease,
+    transform 500ms ease;
 }
 
 .outline-text:hover,
@@ -48,6 +60,19 @@ body {
   color: var(--text);
   -webkit-text-stroke-color: var(--text);
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.outline-text::selection {
+  color: var(--bg);
+  background: var(--focus);
+  -webkit-text-stroke-color: var(--bg);
+}
+
+.outline-text:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 10px;
+  border-radius: 8px;
 }
 
 .intro {
@@ -55,16 +80,38 @@ body {
   margin: 0 auto;
   color: var(--muted);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (hover: hover) {
   .outline-text {
-    transition: none;
+    cursor: default;
   }
 }
 
 @media (max-width: 600px) {
   .page {
     width: min(100% - 24px, 1000px);
+    padding: 36px 0;
+  }
+
+  .outline-text {
+    -webkit-text-stroke-width: 0.8px;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .outline-text {
+    -webkit-text-stroke-color: var(--focus);
+  }
+
+  .intro {
+    color: var(--text);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .outline-text {
+    transition: none;
   }
 }
