@@ -18,11 +18,14 @@
       <h1>Diamond Facet</h1>
       <p>
         Geometric form styling with faceted borders, crisp focus states,
-        and a responsive structure.
+        and a responsive structure inspired by cut gemstone surfaces.
       </p>
     </header>
 
     <section class="card" aria-labelledby="form-title">
+      <div class="facet facet-top" aria-hidden="true"></div>
+      <div class="facet facet-bottom" aria-hidden="true"></div>
+
       <div class="head">
         <div>
           <span>FACETED PANEL</span>
@@ -30,6 +33,11 @@
         </div>
         <b aria-hidden="true">◆</b>
       </div>
+
+      <p class="intro">
+        Complete the fields below to create a structured request. The form
+        keeps the angular visual treatment separate from the controls.
+      </p>
 
       <form>
         <div class="grid">
@@ -81,6 +89,12 @@
           </label>
         </div>
 
+        <div class="summary" aria-label="Request guidance">
+          <span>Structured input</span>
+          <span>Keyboard friendly</span>
+          <span>Responsive layout</span>
+        </div>
+
         <label class="check">
           <input type="checkbox" name="confirmation">
           <span>Confirm the supplied information is correct</span>
@@ -104,7 +118,7 @@
         <b>02</b>
         <h3>Sharp focus</h3>
         <p>
-          Keyboard focus remains visible and easy to locate across the native
+          Keyboard focus remains visible and easy to locate across native
           controls without changing their interaction model.
         </p>
       </article>
@@ -117,6 +131,34 @@
           comfortable to read and use.
         </p>
       </article>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <p class="eyebrow">IMPLEMENTATION</p>
+      <h2 id="notes-title">Design details</h2>
+      <div class="notes-grid">
+        <article>
+          <h3>Geometry</h3>
+          <p>
+            Clipped corners and small facet accents create the signature edge
+            without relying on images or SVG assets.
+          </p>
+        </article>
+        <article>
+          <h3>Interaction</h3>
+          <p>
+            Native inputs retain their expected behavior while focus and hover
+            states provide a clear visual response.
+          </p>
+        </article>
+        <article>
+          <h3>Motion</h3>
+          <p>
+            Decorative transitions are restrained and can be disabled through
+            the user's reduced-motion preference.
+          </p>
+        </article>
+      </div>
     </section>
 
     <footer>
