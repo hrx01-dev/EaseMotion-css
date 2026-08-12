@@ -1,0 +1,65 @@
+:root {
+  --bg: #f4f4f1;
+  --track: #d7d7d1;
+  --accent: #242424;
+  --text: #1f1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+}
+
+.page {
+  width: min(820px, calc(100% - 32px));
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.progress {
+  height: 18px;
+  overflow: hidden;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.progress span {
+  display: block;
+  width: var(--value);
+  height: 100%;
+  background: var(--accent);
+  animation: draw 900ms ease-out both;
+}
+
+@keyframes draw {
+  from {
+    width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress span {
+    animation: none;
+  }
+}
