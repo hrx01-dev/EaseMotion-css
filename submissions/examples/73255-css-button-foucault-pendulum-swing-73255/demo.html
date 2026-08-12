@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Foucault pendulum swing CSS button demonstration for EaseMotion issue #73255.">
+  <title>Foucault Pendulum Swing Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">EaseMotion · Issue #73255</p>
+      <h1>Foucault Pendulum Swing</h1>
+      <p class="lead">A pendulum-inspired button where a suspended marker swings gently around a stable control surface.</p>
+    </header>
+
+    <section class="stage" aria-labelledby="demo-title">
+      <div class="showcase">
+        <div class="pendulum" aria-hidden="true"><span></span></div>
+        <p class="eyebrow">Interactive control</p>
+        <h2 id="demo-title">Start the observation</h2>
+        <p>The swinging marker is decorative; the button remains a standard keyboard-accessible control.</p>
+        <div class="actions"><button class="swing" type="button">Observe motion</button><button class="swing quiet" type="button">Reset field</button></div>
+      </div>
+    </section>
+
+    <section class="details" aria-labelledby="details-title">
+      <p class="eyebrow">Implementation</p>
+      <h2 id="details-title">A stable control with orbital motion</h2>
+      <div class="grid"><article><b>01</b><h3>Pivot point</h3><p>A pseudo-element establishes a top anchor and rotates around the same origin as a physical pendulum.</p></article><article><b>02</b><h3>Hardware-friendly</h3><p>The animation relies on transforms and opacity-free geometry, avoiding layout changes during motion.</p></article><article><b>03</b><h3>Motion safe</h3><p>Reduced-motion preferences stop the pendulum and preserve the complete button content.</p></article></div>
+    </section>
+
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #73255</span></footer>
+  </main>
+</body>
+</html>
