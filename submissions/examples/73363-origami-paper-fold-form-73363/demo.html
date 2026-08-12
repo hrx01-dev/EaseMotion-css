@@ -24,14 +24,20 @@
 
     <section class="paper" aria-labelledby="form-title">
       <div class="fold" aria-hidden="true"></div>
+      <div class="fold-shadow" aria-hidden="true"></div>
 
       <div class="head">
         <div>
           <span>FOLDED NOTE</span>
           <h2 id="form-title">Write a message</h2>
         </div>
-        <b>03</b>
+        <b aria-hidden="true">03</b>
       </div>
+
+      <p class="intro">
+        This paper-inspired panel keeps the interaction familiar while using
+        layered surfaces to suggest a carefully folded sheet.
+      </p>
 
       <form>
         <div class="grid">
@@ -83,6 +89,12 @@
           </label>
         </div>
 
+        <div class="paper-details" aria-label="Message options">
+          <span>Handwritten feel</span>
+          <span>Clear hierarchy</span>
+          <span>Native controls</span>
+        </div>
+
         <label class="check">
           <input type="checkbox" name="copy">
           <span>Send a copy to my email</span>
@@ -119,6 +131,34 @@
           reducing the usable input area.
         </p>
       </article>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <p class="eyebrow">IMPLEMENTATION</p>
+      <h2 id="notes-title">Paper study</h2>
+      <div class="notes-grid">
+        <article>
+          <h3>Fold</h3>
+          <p>
+            A clipped corner provides the visual cue of a folded page while
+            remaining lightweight and entirely CSS-based.
+          </p>
+        </article>
+        <article>
+          <h3>Texture</h3>
+          <p>
+            Soft surfaces and restrained shadows establish depth without
+            competing with the form fields.
+          </p>
+        </article>
+        <article>
+          <h3>Motion</h3>
+          <p>
+            Focus transitions stay subtle and are removed for users who prefer
+            reduced motion.
+          </p>
+        </article>
+      </div>
     </section>
 
     <footer>
