@@ -1,0 +1,82 @@
+:root {
+  --bg: #dfe4ea;
+  --surface: #dfe4ea;
+  --text: #39424e;
+  --accent: #68798e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+}
+
+.page {
+  width: min(700px, calc(100% - 32px));
+}
+
+.eyebrow {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.card {
+  padding: 42px;
+  border-radius: 30px;
+  text-align: center;
+  background: var(--surface);
+  box-shadow: 16px 16px 35px rgba(163, 174, 189, 0.7), -16px -16px 35px rgba(255, 255, 255, 0.85);
+}
+
+.card h1 {
+  margin-top: 0;
+}
+
+.progress {
+  height: 22px;
+  margin: 32px 0 18px;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: inset 4px 4px 9px rgba(163, 174, 189, 0.7), inset -4px -4px 9px rgba(255, 255, 255, 0.8);
+}
+
+.progress span {
+  display: block;
+  width: var(--value);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  box-shadow: 2px 2px 6px rgba(80, 94, 111, 0.45);
+  animation: fill 1.2s ease-out both;
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress span {
+    animation: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 28px 20px;
+  }
+}
