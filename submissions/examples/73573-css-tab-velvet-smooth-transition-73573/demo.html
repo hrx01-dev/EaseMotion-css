@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Velvet smooth transition CSS tabs demonstration for EaseMotion issue #73573.">
+  <title>Velvet Smooth Transition Tabs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">EaseMotion · Issue #73573</p>
+      <h1>Velvet Smooth Tabs</h1>
+      <p class="lead">A soft segmented control with a sliding active surface, subtle depth, and a dark-mode-friendly palette.</p>
+    </header>
+
+    <section class="demo" aria-labelledby="demo-title">
+      <p class="eyebrow">Segmented control</p>
+      <h2 id="demo-title">Choose a workspace</h2>
+      <div class="tabs" role="tablist" aria-label="Workspace views">
+        <a class="tab active" href="#overview" role="tab" aria-selected="true">Overview</a>
+        <a class="tab" href="#activity" role="tab" aria-selected="false">Activity</a>
+        <a class="tab" href="#settings" role="tab" aria-selected="false">Settings</a>
+      </div>
+      <div class="preview" id="overview"><strong>Overview</strong><span>The velvet surface moves smoothly between choices while the native links remain keyboard accessible.</span></div>
+    </section>
+
+    <section class="details" aria-labelledby="details-title">
+      <p class="eyebrow">Implementation</p>
+      <h2 id="details-title">Smooth without external scripts</h2>
+      <div class="grid"><article><b>01</b><h3>Soft surface</h3><p>Gradients and shadows create a textile-inspired active state.</p></article><article><b>02</b><h3>Native anchors</h3><p>Links keep the example functional without requiring JavaScript.</p></article><article><b>03</b><h3>Motion safe</h3><p>Transitions stop for users who prefer reduced motion.</p></article></div>
+    </section>
+
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #73573</span></footer>
+  </main>
+</body>
+</html>
