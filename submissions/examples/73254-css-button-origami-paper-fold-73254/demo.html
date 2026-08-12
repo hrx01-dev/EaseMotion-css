@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Origami paper fold CSS button demonstration for EaseMotion issue #73254.">
+  <title>Origami Paper Fold Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">EaseMotion · Issue #73254</p>
+      <h1>Origami Paper Fold</h1>
+      <p class="lead">A tactile button that folds its corner on interaction using pseudo-elements and hardware-friendly transforms.</p>
+    </header>
+
+    <section class="stage" aria-labelledby="demo-title">
+      <div class="showcase">
+        <p class="eyebrow">Interactive button</p>
+        <h2 id="demo-title">Choose your paper</h2>
+        <p>Hover or focus the controls to reveal the folded-corner motion.</p>
+        <div class="actions"><button type="button" class="fold primary">Fold in</button><button type="button" class="fold secondary">Open sheet</button></div>
+      </div>
+    </section>
+
+    <section class="details" aria-labelledby="details-title">
+      <p class="eyebrow">Implementation</p>
+      <h2 id="details-title">Simple geometry, responsive behavior</h2>
+      <div class="grid"><article><b>01</b><h3>Folded corner</h3><p>A pseudo-element rotates around its edge to suggest a paper corner turning over.</p></article><article><b>02</b><h3>Native button</h3><p>Both controls remain real buttons so keyboard and assistive technology behavior is preserved.</p></article><article><b>03</b><h3>Motion safe</h3><p>The transition is disabled for users who prefer reduced motion.</p></article></div>
+    </section>
+
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #73254</span></footer>
+  </main>
+</body>
+</html>
