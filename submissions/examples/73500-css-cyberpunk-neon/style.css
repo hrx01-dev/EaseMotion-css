@@ -1,0 +1,77 @@
+:root {
+  --bg: #05000b;
+  --track: #180d25;
+  --neon: #35f7ff;
+  --hot: #ff2bd6;
+  --text: #eefcff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at center, #1a0730, var(--bg) 65%);
+}
+
+.page {
+  width: min(850px, calc(100% - 32px));
+}
+
+.eyebrow {
+  color: var(--neon);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 18px 0 35px;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  text-transform: uppercase;
+  text-shadow: 0 0 12px var(--neon), 0 0 30px var(--hot);
+}
+
+.progress {
+  height: 30px;
+  overflow: hidden;
+  border: 2px solid var(--neon);
+  border-radius: 4px;
+  background: var(--track);
+  box-shadow: 0 0 12px rgba(53, 247, 255, 0.5);
+}
+
+.progress span {
+  display: block;
+  width: var(--value);
+  height: 100%;
+  background: repeating-linear-gradient(135deg, var(--neon) 0 12px, var(--hot) 12px 24px);
+  box-shadow: 0 0 22px var(--neon);
+  animation: charge 2.4s ease-out both;
+}
+
+.value {
+  color: var(--neon);
+  font-weight: 800;
+  text-align: right;
+  text-shadow: 0 0 10px var(--neon);
+}
+
+@keyframes charge {
+  from {
+    width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress span {
+    animation: none;
+  }
+}
