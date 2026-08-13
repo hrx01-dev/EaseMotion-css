@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive SaaS-modern tab bar for EaseMotion issue #79679.">
+  <title>Responsive SaaS Tab Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · #79679</p>
+      <h1>Workspace navigation</h1>
+      <p class="intro">A clean responsive tab bar for product dashboards, account areas, and SaaS settings.</p>
+    </header>
+    <section class="panel" aria-labelledby="tabs-title">
+      <div class="panel-head">
+        <div>
+          <span class="label">PROJECT OVERVIEW</span>
+          <h2 id="tabs-title">Acme workspace</h2>
+        </div>
+        <span class="status">Live</span>
+      </div>
+      <nav class="tabs" aria-label="Workspace sections">
+        <a class="tab active" href="#overview" aria-current="page">Overview</a>
+        <a class="tab" href="#activity">Activity</a>
+        <a class="tab" href="#members">Members</a>
+        <a class="tab" href="#billing">Billing</a>
+      </nav>
+      <div class="content" id="overview">
+        <article><span class="metric">24</span><h3>Active projects</h3><p>Projects currently moving through the workspace.</p></article>
+        <article><span class="metric">89%</span><h3>Delivery health</h3><p>Tasks are tracking against the current release plan.</p></article>
+        <article><span class="metric">12</span><h3>Team members</h3><p>People with access to this workspace.</p></article>
+      </div>
+    </section>
+    <section class="notes">
+      <article><h2>Responsive by default</h2><p>The navigation wraps naturally on smaller screens and keeps each link comfortably tappable.</p></article>
+      <article><h2>Accessible states</h2><p>Native links, visible focus styling, and an explicit current-page state keep the component usable without a mouse.</p></article>
+      <article><h2>Motion safe</h2><p>Transitions become static when reduced motion is requested.</p></article>
+    </section>
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #79679</span></footer>
+  </main>
+</body>
+</html>
