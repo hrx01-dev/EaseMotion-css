@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CSS-only neumorphic input field for EaseMotion issue #79682.">
+  <title>Neumorphic Input Field</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · #79682</p>
+      <h1>Account details</h1>
+      <p>Soft neumorphic controls with native form behavior and clear focus feedback.</p>
+    </header>
+    <section class="card" aria-labelledby="form-title">
+      <div class="heading">
+        <span class="label">PROFILE</span>
+        <h2 id="form-title">Update your information</h2>
+        <p>All fields are handled by the browser without JavaScript.</p>
+      </div>
+      <form>
+        <label>
+          <span>Full name</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Jordan Lee">
+        </label>
+        <label>
+          <span>Email address</span>
+          <input type="email" name="email" autocomplete="email" placeholder="jordan@example.com">
+        </label>
+        <label>
+          <span>Company</span>
+          <input type="text" name="company" autocomplete="organization" placeholder="Acme Studio">
+        </label>
+        <label>
+          <span>Role</span>
+          <input type="text" name="role" placeholder="Product designer">
+        </label>
+        <button type="submit">Save changes</button>
+      </form>
+    </section>
+    <section class="notes" aria-label="Implementation details">
+      <article><h2>Soft depth</h2><p>Inset shadows make the fields appear pressed into the surface.</p></article>
+      <article><h2>Native controls</h2><p>Inputs retain normal browser validation, autocomplete, and keyboard behavior.</p></article>
+      <article><h2>Reduced motion</h2><p>Decorative transitions are disabled when the user requests less motion.</p></article>
+    </section>
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #79682</span></footer>
+  </main>
+</body>
+</html>
