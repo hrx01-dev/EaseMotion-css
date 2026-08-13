@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive minimalist morphing tab bar for EaseMotion issue #78781.">
+  <title>Morphing Tab Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · Issue #78781</p>
+      <h1>Morphing Tabs</h1>
+      <p>A minimalist tab bar where the active surface smoothly changes shape while the navigation remains semantic and keyboard friendly.</p>
+    </header>
+
+    <section class="demo" aria-labelledby="tabs-title">
+      <span class="label">MINIMAL NAVIGATION</span>
+      <h2 id="tabs-title">Choose a workspace</h2>
+      <p class="copy">The active tab uses a shared visual surface. Each link remains a normal anchor so the example works without JavaScript.</p>
+
+      <nav class="tabs" aria-label="Workspace navigation">
+        <a class="tab active" href="#overview" aria-current="page">Overview</a>
+        <a class="tab" href="#activity">Activity</a>
+        <a class="tab" href="#settings">Settings</a>
+        <a class="tab" href="#profile">Profile</a>
+      </nav>
+    </section>
+
+    <section class="cards" aria-label="Tab examples">
+      <article><span>01</span><h3>Soft morph</h3><p>Rounded geometry transitions between quiet and active states without shifting the layout.</p></article>
+      <article><span>02</span><h3>Clear focus</h3><p>Keyboard users receive a visible focus ring that is separate from the active treatment.</p></article>
+      <article><span>03</span><h3>Responsive</h3><p>The tab group wraps cleanly on narrow screens while preserving comfortable touch targets.</p></article>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <span class="label">IMPLEMENTATION</span>
+      <h2 id="notes-title">Motion with restraint</h2>
+      <p>The effect relies on transform and color changes rather than layout animation. Reduced-motion users receive a stable active state.</p>
+    </section>
+
+    <footer>Pure HTML + Vanilla CSS · Issue #78781</footer>
+  </main>
+</body>
+</html>
