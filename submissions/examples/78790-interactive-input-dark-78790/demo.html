@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive dark-mode interactive input field for EaseMotion issue #78790.">
+  <title>Interactive Dark Input</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · #78790</p>
+      <h1>Interactive Input</h1>
+      <p>A dark interface with animated labels, clear focus treatment, and useful validation states.</p>
+    </header>
+
+    <section class="demo" aria-labelledby="form-title">
+      <span class="label">ACCOUNT SETUP</span>
+      <h2 id="form-title">Tell us about you</h2>
+      <form>
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Your name">
+        </label>
+        <label class="field">
+          <span>Email address</span>
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label class="field">
+          <span>Role</span>
+          <select name="role">
+            <option>Designer</option>
+            <option>Developer</option>
+            <option>Product manager</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="What are you building?"></textarea>
+        </label>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <span class="label">INTERACTION</span>
+      <h2 id="notes-title">Focus with purpose</h2>
+      <div class="grid">
+        <article><h3>Dark surface</h3><p>High contrast text and borders preserve readability on the deep background.</p></article>
+        <article><h3>Focus ring</h3><p>Keyboard users receive a strong visible outline that does not rely on color alone.</p></article>
+        <article><h3>Responsive</h3><p>Fields remain comfortable to use across narrow mobile and wide desktop layouts.</p></article>
+      </div>
+    </section>
+
+    <footer>Pure HTML + Vanilla CSS · Issue #78790</footer>
+  </main>
+</body>
+</html>
