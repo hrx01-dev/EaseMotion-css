@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+
+.page {
+  width: min(850px, calc(100% - 32px));
+  margin: auto;
+  padding: 64px 0;
+}
+
+.card {
+  padding: 34px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.card h2 {
+  margin-top: 42px;
+}
+
+.card p,
+.details p {
+  color: #666;
+  line-height: 1.75;
+}
+
+.card a {
+  color: #222;
+  font-weight: 700;
+}
+
+.card a:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 4px;
+}
+
+.details {
+  margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 42px 0;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
