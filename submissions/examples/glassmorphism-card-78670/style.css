@@ -1,0 +1,66 @@
+:root {
+  --bg: #090d1b;
+  --text: #f7f8ff;
+  --muted: #adb6cd;
+  --accent: #9c8cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 20%, #263b70, transparent 34%), var(--bg);
+}
+
+.stage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  width: min(100%, 520px);
+  padding: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.card__label {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.card p:not(.card__label) {
+  margin: 0 0 26px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card a {
+  color: var(--text);
+  font-weight: 750;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 30px 24px;
+  }
+}
