@@ -1,0 +1,29 @@
+:root { --bg: #080a0f; --panel: #11151d; --text: #f4f7fb; --muted: #929cab; --accent: #8cb4ff; --line: #2b3340; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; color: var(--text); font-family: Inter, system-ui, sans-serif; background: radial-gradient(circle at 50% 0, #182235, var(--bg) 60%); }
+.page { width: min(920px, calc(100% - 32px)); margin: auto; padding: 64px 0; }
+.hero { max-width: 760px; margin-bottom: 40px; }
+.eyebrow, .label { color: var(--muted); font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+h1 { margin: 14px 0; font-size: clamp(3rem, 8vw, 6rem); line-height: .9; }
+.hero > p:last-child, .grid p { color: var(--muted); line-height: 1.75; }
+.demo, .notes { padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: rgba(17, 21, 29, .9); }
+.demo h2, .notes h2 { margin: 8px 0 28px; font-size: clamp(1.8rem, 4vw, 3rem); }
+form { display: grid; gap: 20px; }
+.field { position: relative; display: grid; gap: 8px; }
+.field span { color: var(--muted); font-size: .9rem; transition: color 180ms ease; }
+.field:focus-within span { color: var(--accent); }
+input, select, textarea { width: 100%; padding: 14px 15px; border: 1px solid var(--line); border-radius: 12px; color: var(--text); background: #0b0e14; font: inherit; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+textarea { resize: vertical; min-height: 130px; }
+input::placeholder, textarea::placeholder { color: #606a78; }
+input:hover, select:hover, textarea:hover { border-color: #4a5566; }
+input:focus, select:focus, textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4px rgba(140, 180, 255, .12); transform: translateY(-1px); }
+button { justify-self: start; padding: 12px 20px; border: 0; border-radius: 10px; color: #08101e; background: var(--accent); font: inherit; font-weight: 800; cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease; }
+button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(140, 180, 255, .18); }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.notes { margin-top: 24px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid article { padding: 20px; border: 1px solid var(--line); border-radius: 16px; }
+.grid h3 { margin: 0 0 8px; }
+footer { margin-top: 28px; color: var(--muted); font-size: .8rem; }
+@media (max-width: 700px) { .page { padding: 44px 0; } .demo, .notes { padding: 24px; } .grid { grid-template-columns: 1fr; } button { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { input, select, textarea, button, .field span { transition: none; } }
