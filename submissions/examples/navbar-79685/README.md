@@ -1,33 +1,31 @@
 # Minimal Glassmorphism Navbar
 
-A responsive minimalist glass navigation component created for EaseMotion issue #79685. The component combines translucent surfaces, restrained borders, clear navigation hierarchy, and responsive behavior while remaining dependency-free.
+A responsive minimalist glass navigation component created for EaseMotion issue #79685. It combines a translucent surface, subtle depth, clear navigation hierarchy, and responsive behavior in a dependency-free implementation.
 
 ## Overview
 
-This navigation is designed for landing pages, portfolios, product sites, dashboards, and other interfaces that need a polished glassmorphism treatment without adding a framework or JavaScript dependency. The visual effect stays secondary to the navigation content so links remain easy to scan and use.
+This component is suitable for landing pages, portfolios, product sites, dashboards, and application shells that need polished navigation without a framework or JavaScript dependency. The visual treatment stays secondary to the content so links remain easy to scan and use.
 
 ## Features
 
 - Responsive navigation layout
-- Translucent glass surface
-- Backdrop blur treatment
-- Subtle border and depth styling
+- Translucent glass surface with backdrop blur
 - Active navigation state
-- Native semantic links
-- Visible keyboard focus states
-- Mobile-friendly spacing
-- Compact call-to-action area
+- Keyboard-visible focus states
+- Mobile-friendly spacing and wrapping
+- Semantic native links
+- Compact call-to-action
 - Pure HTML and vanilla CSS
-- No JavaScript or external UI library required
+- No JavaScript or external UI library
 - Reduced-motion friendly transitions
 
 ## Structure
 
-The submission contains three files:
+The submission contains exactly three implementation files:
 
-- `README.md` — component documentation and integration guidance.
+- `README.md` — documentation and integration guidance.
 - `demo.html` — complete demonstration markup and content.
-- `style.css` — layout, glass effect, states, typography, and responsive rules.
+- `style.css` — layout, glass effects, states, typography, and responsive rules.
 
 ## Usage
 
@@ -39,11 +37,11 @@ The glass surface uses transparency, backdrop blur, a restrained border, and lay
 
 ## Responsive Behavior
 
-On larger screens, the brand, navigation links, and action remain in a single horizontal layout. When available width becomes limited, the links wrap into a second row and the content cards stack into a single column. This keeps the component usable without forcing a narrow desktop layout onto small screens.
+On larger screens, the brand, navigation links, and action use a horizontal arrangement. At narrower widths, the links move into a separate row and supporting content can stack into a single column. This preserves readable spacing and touch-friendly controls.
 
 ## Accessibility
 
-Navigation uses native anchor elements for predictable browser and keyboard behavior. The current page is identified with `aria-current`, while visible focus styling makes keyboard navigation easier to follow. Essential navigation information does not depend on hover.
+Navigation uses native anchor elements for predictable browser and keyboard behavior. The current page is identified with `aria-current`, while visible `:focus-visible` styling makes keyboard navigation easier to follow. Essential navigation information does not depend on hover.
 
 ## Customization
 
@@ -51,7 +49,7 @@ Adjust spacing, border opacity, blur strength, shadows, typography, surface tran
 
 ## Performance
 
-The component contains no JavaScript, images, or third-party dependencies. The visual treatment is implemented with CSS, keeping the demo lightweight and straightforward to integrate.
+The component contains no JavaScript, images, or third-party dependencies. Its visual effects are handled by CSS, keeping the example lightweight and straightforward to integrate.
 
 ## Browser Support
 
