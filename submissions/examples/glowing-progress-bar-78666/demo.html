@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glowing Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="demo">
+      <section class="card" aria-labelledby="progress-title">
+        <p class="eyebrow">EaseMotion CSS</p>
+
+        <h1 id="progress-title">Glowing Progress Bar</h1>
+
+        <p class="description">
+          A responsive, minimalist progress indicator with a soft animated glow.
+        </p>
+
+        <div class="progress-group">
+          <div class="progress-meta">
+            <span>Project progress</span>
+            <strong>72%</strong>
+          </div>
+
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Project progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="72"
+          >
+            <span class="progress-fill"></span>
+          </div>
+        </div>
+
+        <p class="status">On track · 28% remaining</p>
+      </section>
+    </main>
+  </body>
+</html>
