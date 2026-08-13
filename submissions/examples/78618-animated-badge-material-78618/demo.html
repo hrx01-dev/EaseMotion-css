@@ -1,5 +1,75 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Animated Material Badge</title><link rel="stylesheet" href="style.css"></head>
-<body><main class="page"><header><p>EaseMotion · #78618</p><h1>Animated Material Badge</h1><p>A compact status badge using Material-inspired elevation and subtle motion.</p></header><section class="showcase"><span class="badge">New</span><span class="badge success">Verified</span><span class="badge info">In review</span><span class="badge warning">Pending</span></section><section class="notes"><article><h2>Elevation</h2><p>Small shadows establish a clear layer above the surface.</p></article><article><h2>Motion</h2><p>Entrance and hover movement remain short and restrained.</p></article><article><h2>Responsive</h2><p>Badges wrap naturally when space becomes limited.</p></article></section><footer>Pure HTML · Vanilla CSS · Issue #78618</footer></main></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Animated Material Design badge demonstration for EaseMotion issue #78618.">
+  <title>Animated Material Badge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · Issue #78618</p>
+      <h1>Animated Material Badge</h1>
+      <p class="intro">
+        A compact status system using Material-inspired elevation, clear color
+        meaning, responsive wrapping, and restrained entrance motion.
+      </p>
+    </header>
+
+    <section class="showcase" aria-labelledby="status-title">
+      <div class="section-head">
+        <p class="label">STATUS SYSTEM</p>
+        <h2 id="status-title">Current states</h2>
+        <p>Use short labels to communicate state without making the badge carry too much information.</p>
+      </div>
+
+      <div class="badge-list">
+        <span class="badge">New</span>
+        <span class="badge success">Verified</span>
+        <span class="badge info">In review</span>
+        <span class="badge warning">Pending</span>
+      </div>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <p class="label">IMPLEMENTATION</p>
+      <h2 id="notes-title">Design notes</h2>
+      <div class="note-grid">
+        <article>
+          <span>01</span>
+          <h3>Elevation</h3>
+          <p>Small shadows establish a clear layer above the surface without creating excessive visual weight.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Motion</h3>
+          <p>Entrance movement is short and subtle so status changes remain informative rather than distracting.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Responsive</h3>
+          <p>Badges wrap naturally and preserve their touch-friendly spacing on smaller screens.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <p class="label">REUSE</p>
+      <h2 id="usage-title">Usage guidance</h2>
+      <ol>
+        <li>Keep badge labels concise and meaningful.</li>
+        <li>Do not rely on color alone to communicate critical information.</li>
+        <li>Keep motion optional for users who prefer reduced movement.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <span>Pure HTML · Vanilla CSS</span>
+      <span>Issue #78618</span>
+    </footer>
+  </main>
+</body>
 </html>
