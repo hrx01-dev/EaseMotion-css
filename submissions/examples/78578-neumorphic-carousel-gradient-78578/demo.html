@@ -1,64 +1,136 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Neumorphic gradient carousel demonstration for EaseMotion issue #78578."
+  >
   <title>Neumorphic Gradient Carousel</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main class="page">
     <header class="hero">
-      <p class="eyebrow">EaseMotion · #78578</p>
+      <p class="eyebrow">EaseMotion · Issue #78578</p>
+      <p class="kicker">Component Study</p>
       <h1>Neumorphic Gradient Carousel</h1>
-      <p class="intro">A responsive card collection combining soft depth, subtle gradients, and clear controls.</p>
+      <p class="intro">
+        A tactile carousel concept combining soft depth, restrained gradients,
+        responsive cards, and accessible controls.
+      </p>
+      <div class="meta" aria-label="Component characteristics">
+        <span>Soft depth</span>
+        <span>Responsive</span>
+        <span>Motion safe</span>
+      </div>
     </header>
+
     <section class="carousel" aria-labelledby="carousel-title">
       <div class="section-head">
         <div>
           <span class="label">COLLECTION</span>
           <h2 id="carousel-title">Featured surfaces</h2>
+          <p class="section-copy">
+            Three variations show how the same surface language can support
+            different content without changing the underlying structure.
+          </p>
         </div>
+
         <div class="controls" aria-label="Carousel controls">
-          <button type="button" aria-label="Previous">←</button>
-          <button type="button" aria-label="Next">→</button>
+          <button type="button" aria-label="Previous slide">←</button>
+          <button type="button" aria-label="Next slide">→</button>
         </div>
       </div>
+
       <div class="track">
         <article class="slide active">
           <span class="number">01</span>
           <h3>Soft Gradient</h3>
-          <p>Layered shadows create a tactile surface while the gradient adds depth without heavy decoration.</p>
+          <p>
+            Layered shadows create a tactile surface while a quiet gradient
+            gives the card a subtle visual center.
+          </p>
           <a href="#details">Explore surface</a>
         </article>
+
         <article class="slide">
           <span class="number">02</span>
           <h3>Quiet Contrast</h3>
-          <p>Rounded geometry and restrained contrast keep the card readable across smaller screens.</p>
+          <p>
+            Rounded geometry and restrained contrast keep the component clear
+            when several cards appear together.
+          </p>
           <a href="#details">View details</a>
         </article>
+
         <article class="slide">
           <span class="number">03</span>
           <h3>Responsive Depth</h3>
-          <p>The layout adapts from multiple cards to a focused single-card presentation on narrow screens.</p>
+          <p>
+            The grid moves to a single-column presentation on smaller screens
+            while preserving the same spacing and visual hierarchy.
+          </p>
           <a href="#details">See layout</a>
         </article>
       </div>
+
       <div class="dots" aria-label="Slide position">
         <span aria-current="true"></span>
         <span></span>
         <span></span>
       </div>
     </section>
-    <section id="details" class="notes">
-      <h2>Implementation notes</h2>
+
+    <section id="details" class="notes" aria-labelledby="details-title">
+      <p class="label">IMPLEMENTATION</p>
+      <h2 id="details-title">Design notes</h2>
+
       <div class="note-grid">
-        <article><h3>Depth</h3><p>Paired shadows establish raised and inset states without images.</p></article>
-        <article><h3>Gradient</h3><p>A restrained gradient gives each surface a soft visual anchor.</p></article>
-        <article><h3>Motion</h3><p>Transform transitions are disabled when reduced motion is requested.</p></article>
+        <article>
+          <h3>Depth</h3>
+          <p>
+            Paired shadows establish raised and inset states without images or
+            additional assets.
+          </p>
+        </article>
+
+        <article>
+          <h3>Gradient</h3>
+          <p>
+            A restrained surface gradient adds dimension without reducing text
+            contrast or overwhelming the component.
+          </p>
+        </article>
+
+        <article>
+          <h3>Motion</h3>
+          <p>
+            Hover movement is limited to a transform and is disabled when the
+            user requests reduced motion.
+          </p>
+        </article>
       </div>
     </section>
-    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #78578</span></footer>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <p class="label">REUSE</p>
+      <h2 id="usage-title">Component guidance</h2>
+      <ol>
+        <li>Keep card content short enough to preserve balanced surfaces.</li>
+        <li>Use one active state at a time when adding carousel behavior.</li>
+        <li>Keep controls visible and keyboard reachable.</li>
+      </ol>
+    </section>
+
+    <footer>
+      <span>Pure HTML · Vanilla CSS</span>
+      <span>Issue #78578</span>
+    </footer>
   </main>
 </body>
+
 </html>
