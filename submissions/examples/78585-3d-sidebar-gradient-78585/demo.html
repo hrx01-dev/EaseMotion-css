@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive 3D sidebar with gradient styling for EaseMotion issue #78585.">
+  <title>3D Gradient Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · Issue #78585</p>
+      <h1>3D Gradient Sidebar</h1>
+      <p class="intro">A layered navigation panel using perspective depth, soft gradients, clear focus states, and responsive behavior.</p>
+    </header>
+    <section class="layout" aria-label="Dashboard preview">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">E</span><span>EaseMotion</span></div>
+        <nav aria-label="Primary navigation">
+          <a class="active" href="#overview">Overview</a>
+          <a href="#projects">Projects</a>
+          <a href="#activity">Activity</a>
+          <a href="#settings">Settings</a>
+        </nav>
+        <div class="profile"><span class="avatar">A</span><div><strong>Alex Morgan</strong><small>Designer</small></div></div>
+      </aside>
+      <section class="content" id="overview">
+        <div class="section-head"><span class="label">WORKSPACE</span><h2>Overview</h2><p>Use the sidebar as a focused navigation surface or adapt the same depth treatment for application panels.</p></div>
+        <div class="cards">
+          <article><span>01</span><h3>Perspective</h3><p>Small rotations and layered shadows establish a controlled 3D plane.</p></article>
+          <article><span>02</span><h3>Gradient</h3><p>Multiple background layers add color depth while keeping labels readable.</p></article>
+          <article><span>03</span><h3>Responsive</h3><p>The sidebar becomes a stacked navigation panel on compact screens.</p></article>
+        </div>
+      </section>
+    </section>
+    <section class="notes" id="projects">
+      <p class="label">IMPLEMENTATION</p>
+      <h2>Design notes</h2>
+      <div class="note-grid">
+        <article><h3>Depth</h3><p>Use transforms for decorative perspective instead of changing document flow.</p></article>
+        <article><h3>Focus</h3><p>Every navigation item receives a visible keyboard focus treatment.</p></article>
+        <article><h3>Motion</h3><p>Reduced-motion users receive the same layout without animated transforms.</p></article>
+      </div>
+    </section>
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #78585</span></footer>
+  </main>
+</body>
+</html>
