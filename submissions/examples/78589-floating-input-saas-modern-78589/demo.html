@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Floating SaaS input field for EaseMotion issue #78589.">
+  <title>Floating Input Field</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">EaseMotion · Issue #78589</p>
+      <h1>Floating Input</h1>
+      <p>A modern SaaS form pattern where labels remain anchored above the field for clear context.</p>
+    </header>
+    <section class="panel" aria-labelledby="title">
+      <div class="heading"><span class="label">ACCOUNT</span><h2 id="title">Workspace details</h2><p>Complete the fields below to configure a new workspace.</p></div>
+      <form class="form">
+        <label class="field"><input type="text" name="name" placeholder=" " autocomplete="name"><span>Workspace name</span></label>
+        <label class="field"><input type="email" name="email" placeholder=" " autocomplete="email"><span>Work email</span></label>
+        <label class="field"><input type="text" name="domain" placeholder=" "><span>Company domain</span></label>
+        <label class="field"><textarea name="notes" rows="5" placeholder=" "></textarea><span>Project notes</span></label>
+        <button type="submit">Create workspace</button>
+      </form>
+    </section>
+    <section class="notes">
+      <p class="label">DESIGN NOTES</p>
+      <h2>Why the label floats</h2>
+      <div class="grid">
+        <article><h3>Context</h3><p>The label remains visible after a value is entered, preventing ambiguous fields.</p></article>
+        <article><h3>Focus</h3><p>Focus changes the border and label treatment without moving the layout.</p></article>
+        <article><h3>Responsive</h3><p>Fields use a single-column structure that remains comfortable on narrow screens.</p></article>
+      </div>
+    </section>
+    <footer><span>Pure HTML · Vanilla CSS</span><span>Issue #78589</span></footer>
+  </main>
+</body>
+</html>
