@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #eaf0ff;
+  background: #0b1020;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #17213a, #090d17 70%);
+}
+
+.demo {
+  width: min(100% - 2rem, 900px);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.panel {
+  padding: clamp(1.25rem, 5vw, 3rem);
+  border: 1px solid #2c3952;
+  border-radius: 22px;
+  background: #111929;
+  box-shadow: 0 25px 70px rgb(0 0 0 / 28%);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #92a9d3;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.intro {
+  max-width: 60ch;
+  margin: 1rem 0 0;
+  color: #aab7cd;
+  line-height: 1.7;
+}
+
+.breadcrumb {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #29364f;
+  border-radius: 14px;
+  background: #0d1422;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: #9eabc0;
+}
+
+.breadcrumb li + li::before {
+  margin: 0 0.65rem;
+  color: #52627c;
+  content: "/";
+}
+
+.breadcrumb a {
+  color: #c8d5ec;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus-visible {
+  color: #ffffff;
+}
+
+.breadcrumb a:focus-visible {
+  outline: 2px solid #91aaff;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: #f3f6ff;
+  font-weight: 700;
+}
+
+.content-card {
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: #172137;
+}
+
+.content-card p {
+  margin: 0.65rem 0 0;
+  color: #aab7cd;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .demo {
+    width: min(100% - 1rem, 900px);
+    padding: 1rem 0;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .breadcrumb li + li::before {
+    margin: 0 0.45rem;
+  }
+}
