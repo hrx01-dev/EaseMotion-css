@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 :root {
   font-family: Inter, system-ui, sans-serif;
@@ -6,7 +8,10 @@
   background: #090d18;
 }
 
-body { margin: 0; min-height: 100vh; }
+body {
+  margin: 0;
+  min-height: 100vh;
+}
 
 .page {
   width: min(92%, 760px);
@@ -14,7 +19,10 @@ body { margin: 0; min-height: 100vh; }
   padding: 4rem 0;
 }
 
-.page__header { margin-bottom: 2rem; }
+.page__header {
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
 
 .eyebrow {
   margin: 0 0 0.5rem;
@@ -32,6 +40,20 @@ body { margin: 0; min-height: 100vh; }
   background: #101426;
 }
 
+.demo-card__label {
+  margin: 0 0 0.4rem;
+  color: #7f8cff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.demo-card__description,
+.usage {
+  color: #b8c1d9;
+  line-height: 1.7;
+}
+
 .tab-bar {
   --tab-surface: #101426;
   --tab-text: #b8c1d9;
@@ -40,6 +62,7 @@ body { margin: 0; min-height: 100vh; }
   --tab-border: rgb(255 255 255 / 14%);
   display: flex;
   gap: 0.35rem;
+  margin-top: 1.5rem;
   padding: 0.35rem;
   border: 1px solid var(--tab-border);
   border-radius: 999px;
@@ -47,6 +70,7 @@ body { margin: 0; min-height: 100vh; }
 }
 
 .tab-bar__tab {
+  flex: 1;
   padding: 0.75rem 1rem;
   border: 0;
   border-radius: 999px;
@@ -68,13 +92,55 @@ body { margin: 0; min-height: 100vh; }
   outline-offset: 3px;
 }
 
+.tab-panel {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--tab-border);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 4%);
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.tab-panel h3 {
+  margin: 0 0 0.45rem;
+}
+
+.tab-panel p {
+  margin: 0;
+  color: #b8c1d9;
+  line-height: 1.6;
+}
+
+.usage {
+  margin-top: 2rem;
+}
+
 @media (max-width: 560px) {
+  .page {
+    padding: 2.5rem 0;
+  }
+
+  .demo-card {
+    padding: 1.4rem;
+  }
+
   .tab-bar {
     border-radius: 1rem;
     flex-wrap: wrap;
   }
+
+  .tab-bar__tab {
+    flex: 1 1 100%;
+    border-radius: 0.75rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tab-bar__tab { scroll-behavior: auto; }
+  .tab-bar__tab,
+  .tab-panel {
+    scroll-behavior: auto;
+  }
 }
