@@ -12,16 +12,47 @@
     <header class="page__header">
       <p class="eyebrow">EaseMotion CSS · #85836</p>
       <h1>Brutalism Segmented Switch</h1>
-      <p>Themeable segmented controls using native buttons, custom properties, and clear selected states.</p>
+      <p>
+        A themeable segmented control using native buttons, explicit pressed
+        states, strong borders, and CSS custom properties for brutalist styling.
+      </p>
     </header>
+
     <section class="demo-card" aria-labelledby="switch-title">
+      <p class="demo-card__label">Theming scope</p>
       <h2 id="switch-title">Display mode</h2>
-      <p id="switch-help">Choose how the example content should be presented.</p>
+      <p id="switch-help">
+        Choose how the example content should be presented. The active segment
+        uses <code>aria-pressed</code> so the selected state is communicated semantically.
+      </p>
+
       <div class="segmented-switch" role="group" aria-label="Display mode">
-        <button class="segmented-switch__option segmented-switch__option--active" type="button" aria-pressed="true">Grid</button>
-        <button class="segmented-switch__option" type="button" aria-pressed="false">List</button>
-        <button class="segmented-switch__option" type="button" aria-pressed="false">Compact</button>
+        <button class="segmented-switch__option segmented-switch__option--active" type="button" aria-pressed="true">
+          Grid
+        </button>
+        <button class="segmented-switch__option" type="button" aria-pressed="false">
+          List
+        </button>
+        <button class="segmented-switch__option" type="button" aria-pressed="false">
+          Compact
+        </button>
       </div>
+
+      <div class="mode-preview" aria-labelledby="preview-title">
+        <h3 id="preview-title">Preview</h3>
+        <p>Grid mode keeps related content visible in a structured set of cards.</p>
+      </div>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <h2 id="usage-title">Theme tokens</h2>
+      <ul>
+        <li><code>--switch-border</code> controls the strong component outline.</li>
+        <li><code>--switch-surface</code> controls the segmented background.</li>
+        <li><code>--switch-active</code> controls the selected segment.</li>
+        <li><code>--switch-active-text</code> controls selected text.</li>
+        <li><code>--switch-shadow</code> controls the offset brutalist depth.</li>
+      </ul>
     </section>
   </main>
 </body>
