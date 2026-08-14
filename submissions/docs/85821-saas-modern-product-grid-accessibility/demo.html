@@ -3,19 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible SaaS product feature grid demonstration.">
   <title>Accessible SaaS Product Grid</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
-    <header class="page__header"><p class="eyebrow">EaseMotion CSS · #85821</p><h1>Accessible Product Grid</h1><p>Semantic feature cards with readable hierarchy and keyboard-safe interactions.</p></header>
+    <header class="page__header">
+      <p class="eyebrow">EaseMotion CSS · #85821</p>
+      <h1>Accessible Product Grid</h1>
+      <p>
+        Semantic feature cards with clear headings, meaningful links, visible focus
+        indicators, and a responsive layout that remains usable at smaller widths.
+      </p>
+    </header>
+
     <section class="feature-grid" aria-labelledby="features-title">
+      <p class="feature-grid__label">Accessibility integration</p>
       <h2 id="features-title">Product features</h2>
+      <p class="feature-grid__intro">
+        Each card contains a heading, supporting description, and native link so
+        the content remains understandable without relying on decorative interaction.
+      </p>
+
       <div class="feature-grid__list">
-        <article class="feature-grid__item"><h3>Automation</h3><p>Streamline recurring work.</p><a href="#automation">Learn about automation</a></article>
-        <article class="feature-grid__item"><h3>Analytics</h3><p>Understand product activity.</p><a href="#analytics">Learn about analytics</a></article>
-        <article class="feature-grid__item"><h3>Security</h3><p>Protect important workflows.</p><a href="#security">Learn about security</a></article>
+        <article class="feature-grid__item">
+          <h3>Automation</h3>
+          <p>Streamline recurring work with reusable workflows and clear status information.</p>
+          <a href="#automation">Learn about automation</a>
+        </article>
+        <article class="feature-grid__item">
+          <h3>Analytics</h3>
+          <p>Understand product activity through focused metrics and readable summaries.</p>
+          <a href="#analytics">Learn about analytics</a>
+        </article>
+        <article class="feature-grid__item">
+          <h3>Security</h3>
+          <p>Protect important workflows with dependable product safeguards and clear controls.</p>
+          <a href="#security">Learn about security</a>
+        </article>
+        <article class="feature-grid__item">
+          <h3>Collaboration</h3>
+          <p>Keep teams aligned with shared context and straightforward project communication.</p>
+          <a href="#collaboration">Learn about collaboration</a>
+        </article>
       </div>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <h2 id="usage-title">Accessibility checklist</h2>
+      <ul>
+        <li>Cards use semantic article elements and headings.</li>
+        <li>Links are native keyboard-accessible controls.</li>
+        <li>Focus remains visible when links receive keyboard focus.</li>
+        <li>Responsive changes preserve the reading order.</li>
+      </ul>
     </section>
   </main>
 </body>
