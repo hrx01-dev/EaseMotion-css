@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Floating Label Input — EaseMotion CSS</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Retro Floating Label Input demonstration.">
+    <title>Retro Floating Label Input | EaseMotion CSS</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="demo">
-      <h1>Retro Contact Field</h1>
-      <form class="field" action="#" method="post">
-        <input id="email" name="email" type="email" placeholder=" " required />
-        <label for="email">Email address</label>
-        <small>Type into the field to see the label move into its compact position.</small>
-      </form>
+    <main class="demo" aria-labelledby="demo-title">
+      <header>
+        <p>EaseMotion CSS component</p>
+        <h1 id="demo-title">Retro Floating Label Input</h1>
+        <p>Focus the field or enter a value to move the label into its compact floating position.</p>
+      </header>
+      <section aria-label="Floating label form preview">
+        <form class="field" action="#" method="post">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder=" " autocomplete="email" required>
+          <small>The field uses the native focus and value states without JavaScript.</small>
+        </form>
+      </section>
     </main>
   </body>
 </html>
