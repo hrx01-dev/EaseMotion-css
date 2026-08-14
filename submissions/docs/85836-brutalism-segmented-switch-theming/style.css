@@ -20,15 +20,21 @@ body {
 }
 
 .page__header {
+  max-width: 700px;
   margin-bottom: 2rem;
 }
 
-.eyebrow {
+.eyebrow,
+.demo-card__label {
   margin: 0 0 0.5rem;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.demo-card__label {
+  color: #555555;
 }
 
 .demo-card {
@@ -47,7 +53,7 @@ body {
   margin: 0 0 0.5rem;
 }
 
-.demo-card p {
+.demo-card > p {
   color: #444444;
   line-height: 1.6;
 }
@@ -56,6 +62,7 @@ body {
   display: flex;
   width: fit-content;
   max-width: 100%;
+  margin-top: 1.5rem;
   border: var(--switch-border);
   background: var(--switch-surface);
 }
@@ -85,7 +92,42 @@ body {
   outline-offset: 3px;
 }
 
+.mode-preview {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 2px solid #111111;
+  background: #f8f8f8;
+}
+
+.mode-preview h3 {
+  margin: 0 0 0.4rem;
+}
+
+.mode-preview p {
+  margin: 0;
+  color: #444444;
+  line-height: 1.6;
+}
+
+.usage {
+  margin-top: 2rem;
+  color: #444444;
+  line-height: 1.7;
+}
+
+.usage li {
+  margin-bottom: 0.45rem;
+}
+
 @media (max-width: 560px) {
+  .page {
+    padding: 2.5rem 0;
+  }
+
+  .demo-card {
+    padding: 1.4rem;
+  }
+
   .segmented-switch {
     width: 100%;
     flex-direction: column;
@@ -103,7 +145,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .segmented-switch__option {
+  .segmented-switch__option,
+  .mode-preview {
     scroll-behavior: auto;
   }
 }
