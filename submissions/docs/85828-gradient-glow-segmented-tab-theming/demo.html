@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Themeable gradient glow segmented tab documentation demo.">
   <title>Gradient Glow Segmented Tab Bar</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,15 +12,56 @@
     <header class="page__header">
       <p class="eyebrow">EaseMotion CSS · #85828</p>
       <h1>Gradient Glow Segmented Tabs</h1>
-      <p>Themeable tabs using custom properties and a clear active state.</p>
+      <p>
+        A themeable segmented control with explicit active states and CSS custom
+        properties for adapting the visual treatment to a product theme.
+      </p>
     </header>
+
     <section class="demo-card" aria-labelledby="title">
+      <p class="demo-card__label">Theming scope</p>
       <h2 id="title">Account</h2>
+      <p class="demo-card__description">
+        Surface, text, border, active, and glow values are exposed on the component.
+        The example keeps the content panel visible so the relationship between
+        the selected tab and its content is clear even in a static documentation demo.
+      </p>
+
       <div class="tab-bar" role="tablist" aria-label="Account sections">
-        <button class="tab-bar__tab tab-bar__tab--active" type="button" role="tab" aria-selected="true">Overview</button>
-        <button class="tab-bar__tab" type="button" role="tab" aria-selected="false">Activity</button>
-        <button class="tab-bar__tab" type="button" role="tab" aria-selected="false">Settings</button>
+        <button class="tab-bar__tab tab-bar__tab--active" type="button" role="tab" aria-selected="true" aria-controls="overview-panel">
+          Overview
+        </button>
+        <button class="tab-bar__tab" type="button" role="tab" aria-selected="false" aria-controls="activity-panel">
+          Activity
+        </button>
+        <button class="tab-bar__tab" type="button" role="tab" aria-selected="false" aria-controls="settings-panel">
+          Settings
+        </button>
       </div>
+
+      <div class="tab-panel" id="overview-panel" role="tabpanel">
+        <h3>Overview</h3>
+        <p>Use the active segment to communicate the currently selected section.</p>
+      </div>
+
+      <div class="tab-panel" id="activity-panel" role="tabpanel" hidden>
+        <h3>Activity</h3>
+        <p>Place recent activity content in this panel when the Activity segment is selected.</p>
+      </div>
+
+      <div class="tab-panel" id="settings-panel" role="tabpanel" hidden>
+        <h3>Settings</h3>
+        <p>Use the final panel for account preferences and other configuration controls.</p>
+      </div>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <h2 id="usage-title">Theme tokens</h2>
+      <p>
+        Override <code>--tab-surface</code>, <code>--tab-text</code>,
+        <code>--tab-active</code>, <code>--tab-glow</code>, and
+        <code>--tab-border</code> on the tab component to create a new visual theme.
+      </p>
     </section>
   </main>
 </body>
