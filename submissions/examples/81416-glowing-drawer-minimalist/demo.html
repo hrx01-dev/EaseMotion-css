@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glowing Drawer — EaseMotion CSS</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Glowing Drawer component demonstration.">
+    <title>Glowing Drawer | EaseMotion CSS</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="demo">
-      <h1>Glowing Drawer</h1>
-      <p>
-        A minimalist drawer surface with restrained glow, clear hierarchy, and
-        visible keyboard interaction.
-      </p>
-
-      <aside class="drawer" aria-label="Account navigation">
+    <main class="demo" aria-labelledby="demo-title">
+      <header>
+        <p>EaseMotion CSS component</p>
+        <h1 id="demo-title">Glowing Drawer</h1>
+        <p>A minimalist drawer surface combines a restrained glow with clear navigation hierarchy and keyboard-friendly links.</p>
+      </header>
+      <aside class="drawer" aria-label="Workspace navigation">
         <header>
           <h2>Workspace</h2>
           <span aria-hidden="true">✦</span>
@@ -25,6 +25,9 @@
           <a href="#settings">Settings</a>
         </nav>
       </aside>
+      <footer>
+        <p>Use the links to verify hover and keyboard focus states.</p>
+      </footer>
     </main>
   </body>
 </html>
