@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#top">EaseMotion</a>
+    <nav aria-label="Primary navigation">
+      <a href="#components">Components</a>
+      <a href="#docs">Docs</a>
+      <a href="#examples">Examples</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">EaseMotion documentation</p>
+      <h1>Dynamic Navbar</h1>
+      <p>Scroll to see the navigation move into its compact state.</p>
+    </section>
+    <div class="content" aria-hidden="true"></div>
+  </main>
+  <script>
+    const navbar = document.querySelector('#navbar');
+    const updateNavbar = () => navbar.classList.toggle('is-compact', window.scrollY > 80);
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar();
+  </script>
+</body>
+</html>
