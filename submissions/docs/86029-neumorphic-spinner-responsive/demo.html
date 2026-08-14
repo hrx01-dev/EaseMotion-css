@@ -3,16 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive neumorphic spinner loader demonstration.">
   <title>Neumorphic Spinner — Responsive</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
-    <header><p class="eyebrow">EaseMotion CSS · #86029</p><h1>Responsive Neumorphic Spinner</h1><p>The loader scales inside a flexible component container.</p></header>
-    <section class="loader-card" aria-label="Loading demonstration">
+    <header>
+      <p class="eyebrow">EaseMotion CSS · #86029</p>
+      <h1>Responsive Neumorphic Spinner</h1>
+      <p>The loader scales inside a flexible container while keeping the status message readable at compact widths.</p>
+    </header>
+
+    <section class="loader-card" aria-labelledby="loader-title">
       <div class="spinner" aria-hidden="true"></div>
-      <h2>Synchronizing</h2>
-      <p>Please wait while the interface prepares the next view.</p>
+      <h2 id="loader-title">Synchronizing</h2>
+      <p role="status" aria-live="polite">Please wait while the interface prepares the next view.</p>
+      <div class="loader-meta" aria-label="Synchronization details">
+        <span>Step 2 of 3</span>
+        <span>Almost ready</span>
+      </div>
+    </section>
+
+    <section class="responsive-guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">Responsive behavior</h2>
+      <div class="guide-grid">
+        <article><h3>Wide screens</h3><p>The loader has generous internal spacing while remaining centered inside its content column.</p></article>
+        <article><h3>Small screens</h3><p>Padding is reduced so the card does not consume unnecessary vertical space.</p></article>
+        <article><h3>Reduced motion</h3><p>The spinner animation stops when the user requests reduced motion.</p></article>
+      </div>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <h2 id="usage-title">Integration checklist</h2>
+      <ul>
+        <li>Place the loader inside a flexible parent container.</li>
+        <li>Keep status copy short enough for narrow screens.</li>
+        <li>Use the spinner as decoration and expose progress through text.</li>
+        <li>Test the component at mobile, tablet, and desktop widths.</li>
+      </ul>
     </section>
   </main>
 </body>
