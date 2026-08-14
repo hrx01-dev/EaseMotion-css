@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="demo">
+    <p class="eyebrow">EaseMotion documentation</p>
+    <h1>Interactive Carousel</h1>
+    <section class="carousel" aria-label="Featured examples">
+      <div class="viewport">
+        <article class="slide is-active"><span>01</span><h2>Motion</h2><p>Use transitions to guide attention.</p></article>
+        <article class="slide"><span>02</span><h2>Depth</h2><p>Layer visual elements without losing clarity.</p></article>
+        <article class="slide"><span>03</span><h2>Focus</h2><p>Keep controls clear and accessible.</p></article>
+      </div>
+      <div class="controls">
+        <button id="previous" type="button" aria-label="Previous slide">Previous</button>
+        <span id="status" aria-live="polite">Slide 1 of 3</span>
+        <button id="next" type="button" aria-label="Next slide">Next</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const status = document.querySelector('#status');
+    let index = 0;
+
+    function showSlide(nextIndex) {
+      slides[index].classList.remove('is-active');
+      index = (nextIndex + slides.length) % slides.length;
+      slides[index].classList.add('is-active');
+      status.textContent = `Slide ${index + 1} of ${slides.length}`;
+    }
+
+    document.querySelector('#previous').addEventListener('click', () => showSlide(index - 1));
+    document.querySelector('#next').addEventListener('click', () => showSlide(index + 1));
+  </script>
+</body>
+</html>
