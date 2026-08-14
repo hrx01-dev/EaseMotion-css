@@ -3,16 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Themeable neumorphic spinner loader demonstration.">
   <title>Neumorphic Spinner — Theming</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
-    <header><p class="eyebrow">EaseMotion CSS · #86027</p><h1>Themeable Neumorphic Spinner</h1><p>Custom properties control the surface, shadows, accent, and spinner dimensions.</p></header>
-    <section class="loader-card" aria-label="Loading demonstration">
+    <header>
+      <p class="eyebrow">EaseMotion CSS · #86027</p>
+      <h1>Themeable Neumorphic Spinner</h1>
+      <p>Custom properties control the surface, accent, shadows, and spinner presentation.</p>
+    </header>
+
+    <section class="loader-card" aria-labelledby="loader-title">
       <div class="spinner" aria-hidden="true"></div>
-      <h2>Loading workspace</h2>
-      <p>Swap the component tokens to match your product theme.</p>
+      <h2 id="loader-title">Loading workspace</h2>
+      <p role="status" aria-live="polite">Preparing your personalized dashboard.</p>
+    </section>
+
+    <section class="theme-panel" aria-labelledby="theme-title">
+      <h2 id="theme-title">Theme configuration</h2>
+      <p>Use the component tokens to adapt the loader to a different surface or brand accent.</p>
+      <pre><code>:root {
+  --surface: #e7ebf2;
+  --accent: #68748a;
+  --shadow-dark: #a3aab8;
+  --shadow-light: #ffffff;
+}</code></pre>
+    </section>
+
+    <section class="usage" aria-labelledby="usage-title">
+      <h2 id="usage-title">Implementation notes</h2>
+      <ul>
+        <li>Keep the spinner decorative with <code>aria-hidden</code>.</li>
+        <li>Expose meaningful loading text through a live status region.</li>
+        <li>Override custom properties instead of duplicating the component CSS.</li>
+        <li>Respect reduced-motion preferences for users who disable animation.</li>
+      </ul>
     </section>
   </main>
 </body>
