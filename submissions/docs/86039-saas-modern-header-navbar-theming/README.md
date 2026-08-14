@@ -1,9 +1,9 @@
 # SaaS Modern Header Navbar — Theming
 
 ## Overview
-This guide documents the theming configuration for the SaaS Modern Header Navbar Menu.
-The component uses semantic navigation markup and CSS custom properties for visual control.
-The example is designed to be copied into documentation or a product prototype.
+This guide documents theming configuration for the SaaS Modern Header Navbar.
+The component uses semantic navigation markup and CSS custom properties.
+The goal is visual flexibility without changing the HTML structure.
 
 ## Scope
 - Theme-level custom properties.
@@ -14,70 +14,69 @@ The example is designed to be copied into documentation or a product prototype.
 - Standalone demo usage.
 
 ## Markup
-Use a `header` containing a `nav` landmark and an unordered list for navigation links.
-Keep link text descriptive and preserve a logical source order.
-
-```html
-<header class="saas-navbar saas-navbar--compact">
-  <a class="saas-navbar__brand" href="#">Acme</a>
-  <nav aria-label="Primary navigation">
-    <ul class="saas-navbar__list">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#docs">Docs</a></li>
-    </ul>
-  </nav>
-</header>
-```
+Use a `header` containing a `nav` landmark.
+Keep navigation links inside a logical list.
+Use descriptive link text and preserve source order.
 
 ## Modifiers
-Use `saas-navbar--compact` for a denser header presentation.
-Additional modifiers can change alignment or surface treatment without changing markup.
-Keep modifier names attached to the component block for predictable maintenance.
+Use modifiers for meaningful presentation variants.
+Keep modifier names attached to the component block.
+Avoid creating duplicate selectors for simple color changes.
 
-## Custom Properties
-The component exposes variables for surface, text, accent, spacing, radius, and shadow.
-Override them from a theme scope rather than editing every selector.
+## Theme Tokens
+Expose surface, text, accent, border, spacing, radius, and shadow variables.
+Override tokens from a theme scope instead of editing individual selectors.
 
-```css
-.saas-navbar {
-  --navbar-surface: #ffffff;
-  --navbar-text: #182033;
-  --navbar-accent: #315efb;
-  --navbar-radius: 1rem;
-  --navbar-gap: 1.25rem;
-}
-```
+## Surface
+Choose a surface that separates the header from page content.
+Keep the surface readable in both light and dark contexts.
+
+## Text
+Use a primary text token for navigation labels.
+Use a muted token only for secondary information.
+
+## Accent
+Use the accent token for links and active states.
+Check contrast after changing the accent color.
+Do not make active state meaning depend on color alone.
+
+## Spacing
+Keep consistent gaps between navigation items.
+Use a smaller gap only in compact variants.
+Avoid spacing that causes overflow on narrow screens.
 
 ## Accessibility
 The `nav` element provides a native navigation landmark.
 Give it an accessible label when multiple navigation landmarks exist.
-Use real links for navigation rather than clickable generic elements.
-Provide visible focus states for keyboard users.
-Do not rely on hover alone to expose essential destinations.
+Use real links for destinations.
+Provide visible focus states.
+Do not rely on hover alone.
 
 ## Keyboard Navigation
-Links must remain reachable with the Tab key.
-Focus order should match the visual order.
-Do not remove browser focus indicators without a stronger replacement.
-If a mobile menu is added, its trigger should be a real button with state information.
+Links must remain reachable with Tab.
+Focus order should match visual order.
+If a mobile menu exists, its trigger should be a real button.
+Expose expanded state when a collapsible menu is used.
 
 ## Responsive Behavior
-The navigation list should wrap or collapse at an intentional breakpoint.
+Allow navigation to wrap or collapse at an intentional breakpoint.
 Keep tap targets comfortable on narrow screens.
-Avoid horizontal overflow caused by fixed widths.
-Test intermediate widths rather than only mobile and desktop extremes.
+Avoid fixed widths that create horizontal overflow.
+Test intermediate widths.
+
+## Reduced Motion
+Respect `prefers-reduced-motion` for optional menu transitions.
+The navigation remains usable without animation.
 
 ## Customization
-Change theme variables at the component or page scope.
-Use the accent variable for links and active states.
-Keep contrast suitable for both light and dark themes.
-Avoid hard-coding colors in individual modifier selectors when a variable is available.
+Change theme variables at component or page scope.
+Use the accent token for active and interactive states.
+Keep contrast suitable for every supported theme.
 
 ## Demo
-Open `demo.html` directly in a browser to inspect the themed header.
+Open `demo.html` directly to inspect the themed header.
 Resize the viewport to verify responsive behavior.
-Use keyboard navigation to verify focus visibility and order.
+Use keyboard navigation to verify focus order.
 
 ## Testing Checklist
 - Validate navigation landmarks.
@@ -91,11 +90,16 @@ Use keyboard navigation to verify focus visibility and order.
 
 ## File Structure
 `README.md` documents theming and usage.
-`demo.html` provides a standalone example.
-`style.css` contains the presentation and theme variables.
+`demo.html` provides the standalone example.
+`style.css` contains presentation and theme variables.
 
 ## Implementation Notes
 Keep structure in HTML and presentation in CSS.
 Prefer custom properties for reusable design tokens.
 Use modifiers only for meaningful variants.
-The component can be embedded into a larger SaaS page without framework dependencies.
+The component can be embedded without framework dependencies.
+
+## Summary
+The themed navbar keeps visual customization predictable.
+Preserve semantic navigation and keyboard behavior while changing appearance.
+Use the CSS variables as the primary design-system integration point.
